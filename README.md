@@ -7,12 +7,12 @@ https://kind.sigs.k8s.io/docs/user/configuration/#kubeproxy-mode
 iptables:
 
 ```sh
-kind create cluster --config cluster/iptables.yaml
+kind create cluster --name iptables --config cluster/iptables.yaml
 ```
 
 ipvs:
 ```sh
-kind create cluster --config cluster/ipvs.yaml
+kind create cluster --name ipvs --config cluster/ipvs.yaml
 ```
 
 ## debug with Netshoot
@@ -35,4 +35,6 @@ kubectl apply -f debug/debug.yaml
 iptables-save
 
 ipvsadm -l -n
+
+ip addr
 ```
